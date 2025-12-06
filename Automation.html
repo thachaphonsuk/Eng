@@ -129,6 +129,9 @@
             transition: transform 0.3s, border-color 0.3s;
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content in box */
         }
 
         .highlight-box:hover {
@@ -335,17 +338,39 @@
             <p style="margin-top: 20px;">"นักแก้ปัญหาด้วยหลักการวิทยาศาสตร์"</p>
         </div>
 
-        <!-- Slide 5: WORKSHOP (Updated for M.2 & Daily Life) -->
+        <!-- Slide 5: WORKSHOP (Redesigned with Grid) -->
         <div class="slide" id="slide-5">
-            <h1 style="color: var(--accent-gold);">⚡ WORKSHOP: Engineering Thinking ⚡</h1>
-            <h2>ฝึกคิดแบบวิศวกร: จากปัญหาใกล้ตัว (10 นาที)</h2>
-            <p style="font-size: 2rem; color: var(--accent-cyan);">ปัญหา: "สายชาร์จแบตฯ หัก/ขาด บ่อยมาก"</p>
-            <div class="highlight-box" style="margin-top: 20px; width: 75%; text-align: left;">
-                <h3 style="color: var(--accent-kmutnb); margin-bottom: 20px;">กระบวนการคิดแก้ปัญหา:</h3>
-                <p style="font-size: 1.6rem; margin: 15px 0;">1. <strong>Analyze (หาสาเหตุ):</strong> ทำไมถึงขาด? (ดึงสายแรง? เล่นไปชาร์จไปแล้วสายงอ?)</p>
-                <p style="font-size: 1.6rem; margin: 15px 0;">2. <strong>Ideate (หาไอเดีย):</strong> เอาสปริงปากกามาใส่? ใช้เทปพันสายไฟ? ซื้อสายถัก?</p>
-                <p style="font-size: 1.6rem; margin: 15px 0;">3. <strong>Select (เลือกวิธี):</strong> วิธีไหนประหยัดและแก้ปัญหาได้จริง?</p>
+            <h1 style="color: var(--accent-gold); font-size: 4rem;">⚡ WORKSHOP: Engineering Thinking</h1>
+            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">ฝึกคิดแบบวิศวกร: จากปัญหาใกล้ตัว</h2>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 15px 30px; border-radius: 50px; margin-bottom: 20px; border: 1px solid var(--accent-cyan);">
+                <span style="font-size: 2rem; color: #fff;">📱 โจทย์: "สายชาร์จแบตฯ หัก/ขาด บ่อยมาก"</span>
             </div>
+
+            <div class="grid-layout" style="margin-top: 10px; gap: 20px;">
+                <!-- Step 1 -->
+                <div class="highlight-box" style="border-top: 5px solid var(--accent-kmutnb);">
+                    <div style="font-size: 3rem; margin-bottom: 10px;">🔍</div>
+                    <h3 style="color: var(--accent-kmutnb); margin-bottom: 10px;">1. Analyze</h3>
+                    <p style="font-size: 1.3rem; margin: 0;"><strong>วิเคราะห์สาเหตุ:</strong><br>ทำไมถึงขาด?<br>(ดึงสายแรง? / เล่นไปชาร์จไป?)</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="highlight-box" style="border-top: 5px solid var(--accent-gold);">
+                    <div style="font-size: 3rem; margin-bottom: 10px;">💡</div>
+                    <h3 style="color: var(--accent-gold); margin-bottom: 10px;">2. Ideate</h3>
+                    <p style="font-size: 1.3rem; margin: 0;"><strong>ระดมไอเดีย:</strong><br>มีวิธีแก้ไหม?<br>(ใช้สปริงปากกา? / ซื้อสายถัก?)</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="highlight-box" style="border-top: 5px solid var(--accent-cyan);">
+                    <div style="font-size: 3rem; margin-bottom: 10px;">✅</div>
+                    <h3 style="color: var(--accent-cyan); margin-bottom: 10px;">3. Select</h3>
+                    <p style="font-size: 1.3rem; margin: 0;"><strong>ตัดสินใจ:</strong><br>วิธีไหนดีที่สุด?<br>(ประหยัด + แก้ได้จริง)</p>
+                </div>
+            </div>
+            
+             <p style="font-size: 1.2rem; color: #888; margin-top: 20px;">*ลองจับคู่คุยกัน 2 นาทีครับ*</p>
         </div>
 
         <!-- Slide 6: Mindset -->
