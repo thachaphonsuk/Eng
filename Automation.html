@@ -134,6 +134,16 @@
             align-items: center; /* Center content in box */
         }
 
+        .highlight-box.left-align {
+            align-items: flex-start;
+            text-align: left;
+        }
+        
+        .highlight-box.right-align {
+            align-items: flex-end;
+            text-align: right;
+        }
+
         .highlight-box:hover {
             transform: translateY(-5px);
             border-color: var(--accent-kmutnb);
@@ -171,6 +181,42 @@
             width: 100%;
             max-width: 1200px;
             margin-top: 30px;
+        }
+
+        .ev-case-study-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 30px;
+            align-items: center;
+            width: 90%;
+            margin-top: 30px;
+        }
+
+        .ev-icon-container {
+            font-size: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,0.3);
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            border: 2px dashed rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 1024px) {
+            .ev-case-study-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .ev-icon-container {
+                order: -1; /* Move icon to top on smaller screens */
+                margin-bottom: 20px;
+            }
+            .highlight-box.left-align, .highlight-box.right-align {
+                align-items: center;
+                text-align: center;
+            }
         }
 
         .icon-large {
@@ -462,27 +508,39 @@
         <div class="slide" id="slide-12">
             <h2 style="color: var(--accent-gold);">Case Study: รถไฟฟ้า 1 คัน</h2>
             <p>ต้องใช้วิศวกรสาขาไหนบ้าง?</p>
-            <div style="position: relative; width: 85%; height: 500px; border: 2px dashed rgba(255,255,255,0.1); margin-top: 30px; display: flex; align-items: center; justify-content: center; border-radius: 20px; background: rgba(0,0,0,0.3);">
-                <span style="font-size: 10rem;">🚗</span>
-                
-                <!-- Annotations -->
-                <div style="position: absolute; top: 10%; left: 5%;" class="highlight-box">
-                    <strong>เครื่องกล</strong><br><small>โครงสร้าง/ล้อ/เบรก</small>
+            
+            <div class="ev-case-study-grid">
+                <!-- Left Column -->
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <div class="highlight-box left-align">
+                        <strong style="font-size: 1.5rem;">⚙️ เครื่องกล</strong>
+                        <small style="font-size: 1.2rem;">โครงสร้าง / ล้อ / ระบบเบรก / ช่วงล่าง</small>
+                    </div>
+                    <div class="highlight-box left-align">
+                        <strong style="font-size: 1.5rem;">💻 คอมพิวเตอร์/AI</strong>
+                        <small style="font-size: 1.2rem;">ระบบ Autopilot / จอสัมผัส / Software</small>
+                    </div>
                 </div>
-                
-                <div style="position: absolute; top: 10%; right: 5%; border-color: var(--accent-gold);" class="highlight-box">
-                    <strong>ไฟฟ้ากำลัง</strong><br><small>มอเตอร์/ระบบชาร์จ</small>
+
+                <!-- Center Icon -->
+                <div class="ev-icon-container">
+                    🚗
                 </div>
-                
-                <div style="position: absolute; bottom: 10%; left: 5%;" class="highlight-box">
-                    <strong>คอมพิวเตอร์/AI</strong><br><small>Autopilot/จอสัมผัส</small>
-                </div>
-                
-                <div style="position: absolute; bottom: 10%; right: 5%; border-color: var(--accent-kmutnb);" class="highlight-box">
-                    <strong>เครื่องมือวัดฯ</strong><br><small>เซนเซอร์รอบคัน/ระบบคุมเสถียรภาพ</small>
+
+                <!-- Right Column -->
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <div class="highlight-box right-align" style="border-color: var(--accent-gold);">
+                        <strong style="font-size: 1.5rem;">⚡ ไฟฟ้ากำลัง</strong>
+                        <small style="font-size: 1.2rem;">มอเตอร์ขับเคลื่อน / แบตเตอรี่แรงดันสูง / ระบบชาร์จ</small>
+                    </div>
+                    <div class="highlight-box right-align" style="border-color: var(--accent-kmutnb);">
+                        <strong style="font-size: 1.5rem;">📡 เครื่องมือวัดฯ</strong>
+                        <small style="font-size: 1.2rem;">เซนเซอร์รอบคัน (LiDAR, Radar) / ระบบควบคุมเสถียรภาพ</small>
+                    </div>
                 </div>
             </div>
-            <p style="margin-top: 20px;">ทุกสาขาต้องทำงานร่วมกันแบบ <strong>บูรณาการ (Integration)</strong></p>
+
+            <p style="margin-top: 30px;">ทุกสาขาต้องทำงานร่วมกันแบบ <strong>บูรณาการ (Integration)</strong></p>
         </div>
 
         <!-- Slide 13: Skill Tree (Updated: Hard vs Soft Skills) -->
